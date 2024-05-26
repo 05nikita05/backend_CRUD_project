@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body class="bg-slate-300">
+    <form action="./<%= filename%>" method="post">
+        <h1 class="m-6 text-xl uppercase">edit a file</h1>
+
+            <div class="edit flex flex-col p-5 gap-4">
+                <h2 class="text-xl font-bold"><%= filename%> </h2>
+                <textarea  class="resize-none w-[250px] p-2" name="filedata" placeholder="filedata"> <%= data %> </textarea>
+                <input class="w-[250px] bg-yellow-500 p-2 text-white font-bold uppercase" type="submit" value="update">
+            </div>
+    </form>
+
+</body>
+</html>

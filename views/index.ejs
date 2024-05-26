@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+      
+</head>
+<body>
+    <div class="workspace w-screen h-screen p-10 bg-slate-300">
+
+        <a class="text-3xl capitalize mr-5" href="./">all files</a>
+        <a class="text-3xl capitalize" href="./create">create</a>
+        
+        <h1 class="mt-10 text-4xl font-bold" >ALL FILES</h1>
+    
+        <div class="file-div mt-8 flex gap-[80px]">
+    
+            <% files.forEach(function(file){ %>
+                  <div class="file p-6 w-[200px] h-fit bg-white flex flex-col gap-2">
+                    <h2 class="text-xl font-serif underline"> <%= file.filename%> </h2>
+                    <div class="filedata text-wrap"> <%= file.filedata %> </div>
+    
+                    <h6 class="flex justify-between"> 
+                        <a class="text-blue-900 text-l font-bold" href="/edit/<%= file.filename %>">edit</a>
+                        <a id="del" class="text-red-600 font-bold" href=" /delete/<%= file.filename %>" >delete</a>
+                    </h6>
+                  </div>
+    
+          <%  }) %>
+            
+        </div>
+    </div>
+
+ 
+
+
+
+</body>
+</html>
+
